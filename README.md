@@ -1,5 +1,10 @@
-# Tarea MVC: Clase Producto y Manejo de Solicitudes HTTP
+# Actividad: Uso de POO para crear un front Controller
+## Información del Autor
 
+- **Nombre**: Can Cime Rodrigo Alexander
+- **Número de Control**: 21390319
+- **Materia**: Desarrollo Web II
+- **Fecha**: 26 de marzo de 2025
 ## Descripción
 
 Este proyecto implementa el manejo de solicitudes HTTP (`GET`, `POST`, `PUT`, `DELETE`) en PHP utilizando un enfoque basado en clases. La clase `Producto` contiene métodos estáticos para procesar estas solicitudes, y el archivo `index.php` llama dinámicamente al método correspondiente según el tipo de solicitud HTTP.
@@ -68,13 +73,13 @@ c:\xampp\htdocs\mvc
 
 ## Cómo Ejecutar
 
-1. Coloca los archivos (`index.php` y [Producto.php](http://_vscodecontentref_/2)) en el directorio [mvc](http://_vscodecontentref_/3).
+1. Coloca los archivos (`index.php` y `Producto.php`) en el directorio `mvc`.
 2. Inicia el servidor XAMPP.
 3. Abre un navegador o utiliza una herramienta como Postman para enviar solicitudes HTTP a `http://localhost/mvc/index.php`.
 
 ## Descripción del Código
 
-### [Producto.php](http://_vscodecontentref_/4)
+### Producto.php
 
 La clase `Producto` contiene los siguientes métodos estáticos:
 
@@ -83,7 +88,7 @@ La clase `Producto` contiene los siguientes métodos estáticos:
 - **`put($obj)`**: Maneja solicitudes `PUT`. Recibe un objeto JSON y devuelve un mensaje con los datos.
 - **`delete($id)`**: Maneja solicitudes `DELETE`. Recibe un ID y devuelve un mensaje.
 
-### [index.php](http://_vscodecontentref_/5)
+### index.php
 
 - Extrae el método HTTP y los parámetros de la solicitud.
 - Llama dinámicamente al método correspondiente de la clase `Producto` utilizando `call_user_func`.
@@ -91,3 +96,7 @@ La clase `Producto` contiene los siguientes métodos estáticos:
 ## Ejemplo de Salida
 
 Para una solicitud `GET` a `http://localhost/producto/1`, la salida será:
+
+```
+Se ejecutó Producto::get con ID: 1
+```
